@@ -1,0 +1,2 @@
+export HISTCONTROL=ignorespace:erasedups
+PATH="${PATH}:/usr/local/bin:"

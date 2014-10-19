@@ -1,0 +1,11 @@
+export HISTCONTROL=ignorespace:erasedups
+PATH="${PATH}:/usr/local/bin:"
+
+source /etc/profile.d/bash-completion.sh
+
+fast_git_ps1 ()
+{
+    printf -- "$(git branch 2>/dev/null | grep -e '\* ' | sed 's/^..\(.*\)/ (\1)/')"
+}
+
+export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(fast_git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
