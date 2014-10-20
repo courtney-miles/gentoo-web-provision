@@ -16,5 +16,5 @@ export EM_VERBOSE="--verbose"
 /vagrant/50-update-git.sh
 /vagrant/60-install-redis.sh
 /vagrant/70-install-composer.sh
-#/vagrant/80-final-tweaks.sh
+/vagrant/80-final-tweaks.sh
 
