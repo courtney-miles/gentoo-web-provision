@@ -1,2 +1,4 @@
 export HISTCONTROL=ignorespace:erasedups
 PATH="${PATH}:/usr/local/bin:"
+
+source /etc/profile.d/bash-completion.sh

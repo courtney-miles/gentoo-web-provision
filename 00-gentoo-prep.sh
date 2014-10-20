@@ -21,14 +21,9 @@ emerge-webrsync
 # emerge --sync
 emerge $EM_VERBOSE --update portage
 
-# Updating world removes net.lo.  Updating openrc separately seems to get around that.
-emerge $EM_VERBOSE -update openrc
+# Don't update the kernel -- that requires more work than we want to do in this script.
+echo ">sys-kernel/gentoo-sources-3.10.41-r1" > /etc/portage/package.mask/gentoo-source
 
 emerge $EM_VERBOSE --update --newuse --deep --with-bdeps=y --keep-going @world
 
-# Some packages will have failed, but can be corrected by running perl-cleaner before updating world again.
-perl-cleaner --all
-emerge $EM_VERBOSE --update --newuse --deep --with-bdeps=y --keep-going @world
-
-emerge $EM_VERBOSE --depclean
 revdep-rebuild
