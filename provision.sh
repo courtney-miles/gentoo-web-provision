@@ -3,18 +3,19 @@
 # This script is called from the Vagrant provisioning configuration.
 #
 
+PROV_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export EM_VERBOSE="--verbose"
 
-/vagrant/00-gentoo-prep.sh
-/vagrant/10-install-basic-services.sh
-/vagrant/20-mount-mysql-disk.sh
-/vagrant/21-install-mysql.sh
-/vagrant/30-install-apache.sh
-/vagrant/40-install-php.sh
-/vagrant/41-install-php-phpredis.sh
-/vagrant/42-install-php-xdebug.sh
-/vagrant/50-update-git.sh
-/vagrant/60-install-redis.sh
-/vagrant/70-install-composer.sh
-/vagrant/80-final-tweaks.sh
+${PROV_DIR}/00-gentoo-prep.sh
+${PROV_DIR}/10-install-basic-services.sh
+${PROV_DIR}/20-mount-mysql-disk.sh
+${PROV_DIR}/21-install-mysql.sh
+${PROV_DIR}/30-install-apache.sh
+${PROV_DIR}/40-install-php.sh
+${PROV_DIR}/41-install-php-phpredis.sh
+${PROV_DIR}/42-install-php-xdebug.sh
+${PROV_DIR}/50-update-git.sh
+${PROV_DIR}/60-install-redis.sh
+${PROV_DIR}/70-install-composer.sh
+${PROV_DIR}/80-final-tweaks.sh
 
