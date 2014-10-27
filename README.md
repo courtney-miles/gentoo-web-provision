@@ -4,9 +4,15 @@ Shell scripts for provisioning a Gentoo box as a web server.
 
 ## Where to get a Vagrant box
 
-This set of scripts are design to run with my Gentoo Vagrant box that you can acquire from https://vagrantcloud.com/cmiles/boxes/gentoo-amd64-minimal. 
+This set of scripts are design to run with my Gentoo Vagrant box that you can acquire from https://vagrantcloud.com/cmiles/boxes/gentoo-amd64-minimal.
+ 
+## Vagrantfile configuration
 
-## Mount MySQL on a second disk
+Use the following line for provisioning the box.  But change the args string to suit where you place these scripts (based on where they will appear in the Vagrant box)
+
+    config.vm.provision "shell", path: "./provision.sh", args: "/vagrant"
+
+### Mount MySQL on a second disk
 
 This set of script will attempt to mount a second disk for the MySQL database.  For this to work, you need to add the following to your Vagrantfile.
 

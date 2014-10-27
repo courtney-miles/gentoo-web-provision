@@ -3,7 +3,7 @@
 # This script is called from the Vagrant provisioning configuration.
 #
 
-PROV_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROV_DIR=$1
 export EM_VERBOSE="--verbose"
 
 ${PROV_DIR}/00-gentoo-prep.sh
