@@ -6,7 +6,7 @@
 echo "PHP_TARGETS=\"php5-5\"" >> /etc/portage/make.conf
 echo "PHP_INI_VERSION=\"production\"" >> /etc/portage/make.conf
 
-echo "dev-lang/php apache2 bzip2 cli crypt ctype curl -doc exif -ftp fpm gd gdbm hash inifile iconv intl json mhash -ncurses nls pdo  posix -postgres readline -snmp sockets ssl sqlite -sysvipc threads truetype unicode wddx xmlreader xmlwriter xslt zip zlib" >> /etc/portage/package.use/php
+echo "dev-lang/php apache2 bzip2 cli crypt ctype curl -doc exif -ftp fpm gd gdbm hash inifile iconv intl json mhash mysql -ncurses nls pdo  posix -postgres readline -snmp sockets ssl sqlite -sysvipc threads truetype unicode wddx xmlreader xmlwriter xslt zip zlib" >> /etc/portage/package.use/php
 echo ">=app-admin/eselect-php-0.7.1-r3 fpm" >> /etc/portage/package.use/fpm
 echo ">=app-admin/eselect-php-0.7.1-r3 apache2" >> /etc/portage/package.use/apache2
 
