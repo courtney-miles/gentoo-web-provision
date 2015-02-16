@@ -18,7 +18,8 @@ sed -i "s/en_US.utf8/en_GB.utf8/g" /etc/env.d/02locale
 env-update && source /etc/profile
 
 # Grab a fixed portage snapshot instead of emerge-webrsync so we can ensure these script will work tomorrow.
-wget http://dev.gentoo.org/~swift/snapshots/portage-20150120.tar.bz2{,.gpgsig,.md5sum,.umd5sum}
+echo "Downloading portage snaphshot..."
+wget -nv http://dev.gentoo.org/~swift/snapshots/portage-20150120.tar.bz2{,.gpgsig,.md5sum,.umd5sum}
 mv /usr/portage /usr/portage.bak
 tar xjpf portage-20150120.tar.bz2 -C /usr
 
