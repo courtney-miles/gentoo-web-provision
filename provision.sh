@@ -3,6 +3,8 @@
 # This script is called from the Vagrant provisioning configuration.
 #
 
+set -o errexit
+
 PROV_DIR=$1
 export EM_VERBOSE="--verbose"
 

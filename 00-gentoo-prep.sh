@@ -17,8 +17,11 @@ locale-gen
 sed -i "s/en_US.utf8/en_GB.utf8/g" /etc/env.d/02locale
 env-update && source /etc/profile
 
-emerge-webrsync
-# emerge --sync
+# Grab a fixed portage snapshot instead of emerge-webrsync so we can ensure these script will work tomorrow.
+wget http://dev.gentoo.org/~swift/snapshots/portage-20150120.tar.bz2{,.gpgsig,.md5sum,.umd5sum}
+mv /usr/portage /usr/portage.bak
+tar xjpfv portage-20150120.tar.bz2 -C /usr
+
 emerge $EM_VERBOSE --update portage
 
 # Don't update the kernel -- that requires more work than we want to do in this script.
