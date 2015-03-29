@@ -11,8 +11,9 @@ export EM_VERBOSE="--verbose"
 ${PROV_DIR}/00-gentoo-prep.sh
 ${PROV_DIR}/10-install-basic-services.sh
 ${PROV_DIR}/20-mount-mysql-disk.sh
-${PROV_DIR}/21-install-mysql.sh
+${PROV_DIR}/21-install-mariadb.sh
 ${PROV_DIR}/30-install-apache.sh
+${PROV_DIR}/31-modify-apache-conf.sh
 ${PROV_DIR}/40-install-php.sh
 ${PROV_DIR}/41-install-php-phpredis.sh
 ${PROV_DIR}/42-install-php-xdebug.sh
