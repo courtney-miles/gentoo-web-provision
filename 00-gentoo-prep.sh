@@ -19,9 +19,11 @@ env-update && source /etc/profile
 
 # Grab a fixed portage snapshot instead of emerge-webrsync so we can ensure these script will work tomorrow.
 echo "Downloading portage snaphshot..."
-wget -nv http://dev.gentoo.org/~swift/snapshots/portage-20150320.tar.bz2{,.gpgsig,.md5sum,.umd5sum}
+PORTAGE_DATE=20150320
+wget -nv http://dev.gentoo.org/~swift/snapshots/portage-${PORTAGE_DATE}.tar.bz2{,.gpgsig,.md5sum,.umd5sum}
 mv /usr/portage /usr/portage.bak
-tar xjpf portage-20150120.tar.bz2 -C /usr
+echo "Extracting portage snapshot..."
+tar xjpf portage-${PORTAGE_DATE}.tar.bz2 -C /usr
 
 emerge $EM_VERBOSE --update portage
 
