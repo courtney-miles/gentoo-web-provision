@@ -7,8 +7,8 @@
 echo "127.0.0.1" `hostname` >> /etc/hosts
 
 #set timezone
-cp /usr/share/zoneinfo/UTC /etc/localtime
-echo "UTC" >> /etc/timezone
+#cp /usr/share/zoneinfo/Australia/Brisbane /etc/localtime
+#echo "Australia/Brisbane" >> /etc/timezone
 
 # Set locale
 echo "en_GB.UTF-8 UTF-8" >> /etc/locale.gen
