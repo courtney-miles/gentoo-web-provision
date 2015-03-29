@@ -26,6 +26,3 @@ This set of script will attempt to mount a second disk for the MySQL database.  
 
 If you don't want to use a second disk, remove the call to `30-mount-mysql-disk.sh` from `provision.sh`.
 
-## Kernel updates has been masked
-
-A mask is set in `00-gentoo-prep.sh` to prevent a kernel update.  You may want to change this if you're not running this script against my Vagrant box. 

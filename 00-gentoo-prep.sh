@@ -25,9 +25,6 @@ tar xjpf portage-20150120.tar.bz2 -C /usr
 
 emerge $EM_VERBOSE --update portage
 
-# Don't update the kernel -- that requires more work than we want to do in this script.
-echo ">sys-kernel/gentoo-sources-3.10.41-r1" > /etc/portage/package.mask/gentoo-source
-
 emerge $EM_VERBOSE --update --newuse --deep --with-bdeps=y --keep-going @world
 
 revdep-rebuild
