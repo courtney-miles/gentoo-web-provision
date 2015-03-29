@@ -7,8 +7,8 @@
 echo "127.0.0.1" `hostname` >> /etc/hosts
 
 #set timezone
-cp /usr/share/zoneinfo/Australia/Brisbane /etc/localtime
-echo "Australia/Brisbane" >> /etc/timezone
+cp /usr/share/zoneinfo/UTC /etc/localtime
+echo "UTC" >> /etc/timezone
 
 # Set locale
 echo "en_GB.UTF-8 UTF-8" >> /etc/locale.gen
@@ -19,7 +19,7 @@ env-update && source /etc/profile
 
 # Grab a fixed portage snapshot instead of emerge-webrsync so we can ensure these script will work tomorrow.
 echo "Downloading portage snaphshot..."
-wget -nv http://dev.gentoo.org/~swift/snapshots/portage-20150120.tar.bz2{,.gpgsig,.md5sum,.umd5sum}
+wget -nv http://dev.gentoo.org/~swift/snapshots/portage-20150320.tar.bz2{,.gpgsig,.md5sum,.umd5sum}
 mv /usr/portage /usr/portage.bak
 tar xjpf portage-20150120.tar.bz2 -C /usr
 
