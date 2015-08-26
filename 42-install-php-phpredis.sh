@@ -12,7 +12,7 @@ phpize
 aclocal
 libtoolize --force
 autoheader
-autoconf
+autoreconf
 ./configure
 make && make install
 
