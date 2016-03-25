@@ -5,7 +5,7 @@
 
 cd /tmp
 
-wget -O phpredis-2.2.4.tar.gz https://github.com/nicolasff/phpredis/archive/2.2.4.tar.gz
+wget -tries=5 -O phpredis-2.2.4.tar.gz https://github.com/nicolasff/phpredis/archive/2.2.4.tar.gz
 tar xzfv phpredis-2.2.4.tar.gz
 cd phpredis-2.2.4
 phpize

@@ -13,7 +13,7 @@ echo "127.0.0.1" `hostname` >> /etc/hosts
 # Grab a fixed portage snapshot instead of emerge-webrsync so we can ensure these script will work tomorrow.
 echo "Downloading portage snaphshot..."
 PORTAGE_DATE=20150720
-wget -nv http://dev.gentoo.org/~swift/snapshots/portage-${PORTAGE_DATE}.tar.bz2{,.gpgsig,.md5sum,.umd5sum}
+wget --tries=5 -nv http://dev.gentoo.org/~swift/snapshots/portage-${PORTAGE_DATE}.tar.bz2{,.gpgsig,.md5sum,.umd5sum}
 mv /usr/portage /usr/portage.bak
 echo "Extracting portage snapshot..."
 tar xjpf portage-${PORTAGE_DATE}.tar.bz2 -C /usr
