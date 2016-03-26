@@ -10,7 +10,7 @@ FS_TYPE=ext4
 MNT_POINT=/var/lib/mysql
 
 # fdisk the disk if it's not a block device already:
-[ -b $DEVICE ] || echo 0,,8e | sfdisk $DISK_DEV
+[ -b $DEVICE ] || echo ,,8e | sfdisk $DISK_DEV
 echo "fdisk returned:  $?"
 
 # Create the filesytem if it doesn't already exist
