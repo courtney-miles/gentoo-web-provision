@@ -14,7 +14,7 @@ cat ${DIR}/service-configs/bashrc.root.append >> ~/.bashrc
 cat ${DIR}/service-configs/bashrc.vagrant.append >> /home/vagrant/.bashrc
 
 # Enable git bash completion.
-source /etc/profile.d/bash-completion.sh
+source /etc/bash/bashrc.d/bash_completion.sh 
 # I want this next line to work, but it doesn't.  The "true" is to prevent the error stopping the script.
 eselect bashcomp enable --global git || true
 

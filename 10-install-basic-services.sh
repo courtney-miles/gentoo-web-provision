@@ -13,4 +13,4 @@ rc-update add syslog-ng default
 rc-update add vixie-cron default
 
 # Install bash-completion now so other packages will install their files for it.
-emerge $EM_VERBOSE bash-completion
+emerge $EM_VERBOSE app-shells/bash-completion

@@ -3,11 +3,12 @@
 # Install and configure PHPRedis module for PHP
 #
 
+PHPREDIS_VER=3.0.0
 cd /tmp
 
-wget -tries=5 -O phpredis-2.2.4.tar.gz https://github.com/nicolasff/phpredis/archive/2.2.4.tar.gz
-tar xzfv phpredis-2.2.4.tar.gz
-cd phpredis-2.2.4
+wget -tries=5 -O phpredis-$PHPREDIS_VER.tar.gz https://github.com/nicolasff/phpredis/archive/$PHPREDIS_VER.tar.gz
+tar xzfv phpredis-$PHPREDIS_VER.tar.gz
+cd phpredis-$PHPREDIS_VER
 phpize
 aclocal
 libtoolize --force
@@ -18,7 +19,7 @@ make && make install
 
 #cleanup
 cd /tmp
-rm phpredis-2.2.4.tar.gz
-rm -rf phpredis-2.2.4
+rm phpredis-$PHPREDIS_VER.tar.gz
+rm -rf phpredis-$PHPREDIS_VER
 
 /etc/init.d/php-fpm restart

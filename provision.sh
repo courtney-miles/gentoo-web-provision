@@ -15,8 +15,9 @@ ${PROV_DIR}/21-install-mariadb.sh
 ${PROV_DIR}/30-install-apache.sh
 ${PROV_DIR}/31-modify-apache-conf.sh
 ${PROV_DIR}/40-install-php.sh
-${PROV_DIR}/41-install-php-phpredis.sh
-${PROV_DIR}/42-install-php-xdebug.sh
+${PROV_DIR}/41-install-php-pear.sh
+${PROV_DIR}/42-install-php-phpredis.sh
+${PROV_DIR}/43-install-php-xdebug.sh
 ${PROV_DIR}/50-update-git.sh
 ${PROV_DIR}/60-install-redis.sh
 ${PROV_DIR}/70-install-composer.sh
