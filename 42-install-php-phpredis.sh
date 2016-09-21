@@ -6,7 +6,7 @@
 PHPREDIS_VER=3.0.0
 cd /tmp
 
-wget -tries=5 -O phpredis-$PHPREDIS_VER.tar.gz https://github.com/nicolasff/phpredis/archive/$PHPREDIS_VER.tar.gz
+wget --tries=5 -O phpredis-$PHPREDIS_VER.tar.gz https://github.com/nicolasff/phpredis/archive/$PHPREDIS_VER.tar.gz
 tar xzfv phpredis-$PHPREDIS_VER.tar.gz
 cd phpredis-$PHPREDIS_VER
 phpize
