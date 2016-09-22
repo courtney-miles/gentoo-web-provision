@@ -3,7 +3,7 @@
 # Install and configure PHPRedis module for PHP
 #
 
-PHPREDIS_VER=3.0.0
+PHPREDIS_VER=2.2.8
 cd /tmp
 
 wget --tries=5 -O phpredis-$PHPREDIS_VER.tar.gz https://github.com/nicolasff/phpredis/archive/$PHPREDIS_VER.tar.gz
